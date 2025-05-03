@@ -1,0 +1,18 @@
+{
+    "name": "WordPress",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "wordpress",
+    "workspaceFolder": "/var/www/html",
+    "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+    },
+    "postCreateCommand": "chmod -R 777 /var/www/html",
+    "forwardPorts": [80],
+    "portsAttributes": {
+      "80": {
+        "label": "WordPress Site",
+        "onAutoForward": "openBrowser"
+      }
+    }
+  }
+  
